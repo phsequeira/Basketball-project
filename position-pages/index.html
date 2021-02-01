@@ -8,27 +8,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/reset.css">
     <link rel="stylesheet" href="../styles/style.css">
-    <link rel="stylesheet" href="../styles/quests.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="../styles/home.css">
+    <title>Positions</title>
+
 </head>
 
 <body>
     <header>
+            <h2 id="header" class="gutter-right"></h2>
     </header>
     <main>
         <section>
-          
-          <form>
-              <ul id = 'player-list'></ul>
-              <button>Submit Draft</button>
-          </form>
+            <h2>Draft Selections:</h2>
+            <table id="draft-pool">
+                <tr>
+                    <th>Player Name</th>
+                    <th>Player Position</th>
+                    <th>Player Price</th>
+                </tr>
+            </table>
         </section>
+    </form>
     </main>
     <footer>
         
     </footer>
 
-    <script type="module" src="../players.js"></script>
+    <script type="module" src="app.js"></script>
 </body>
 
 </html>
