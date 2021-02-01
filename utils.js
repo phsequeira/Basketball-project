@@ -7,3 +7,4 @@ export function header() {
     const header = document.getElementById('header');
     header.textContent = `You have $${count.funds} left`;
 }
+

@@ -1,4 +1,3 @@
-import { findById } from './utils.js';
 
 const PLAYER = 'PLAYER';
 const defaultEmptyPlayer = [];
@@ -25,29 +24,4 @@ export function clearTeam() {
     const stringydefaultPlayer = JSON.stringify(defaultEmptyPlayer);
     
     localStorage.setItem(PLAYER, stringydefaultPlayer);
-}
-
-export function setPlayer(player) {
-    const stringyPlayer = JSON.stringify(player);
-    
-    localStorage.setItem(PLAYER, stringyPlayer);
-}
-
-export function addToTeam(id) {
-    const player = getPlayer();
-    
-    const playerItem = findById(player, id);
-
-    if (cartItem) {
-        cartItem.quantity++;
-    }
-    else {
-        const newItem = {
-            id: id,
-            
-        };
-        player.push(newItem);
-    }
-
-    setPlayer(player);
 }

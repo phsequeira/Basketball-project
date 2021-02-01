@@ -1,5 +1,4 @@
 import { findById } from '../utils.js';
-
 const table = document.querySelector('table');
 
 function renderTableRow(playerChose, player) {
