@@ -1,14 +1,15 @@
 
 body {
-   
     
+  
     --header-height: 80px;
     --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
     --gutter: 30px;
     --footer-height: 25px;
     
+    
     font-family: 'Titillium Web', sans-serif;
-    background-color: var(--color2);
+   
 }
 
 main {
@@ -17,10 +18,13 @@ main {
     justify-content: center;
     align-items: center;
     margin-bottom: calc(var(--footer-height));
+    font-size: 50px;
+   
+    
 }
 
 section {
-    background-color: var(--color5);
+    background-color: white;
     width: 1000px;
     max-width: 80%;
     display: flex;
@@ -32,6 +36,9 @@ section {
     margin-top: var(--gutter);
     margin-bottom: var(--gutter);
     border: solid 2px var(--color1);
+    background-color: white;
+    opacity: 89%;
+    border-radius: 4%;
 }
 
 header {
@@ -40,6 +47,7 @@ header {
     background-color: var(--color3);
     height: var(--header-height);
     box-shadow: var(--shadow);
+    
 }
 
 footer {
@@ -111,4 +119,35 @@ table {
     width: 100%;
     border: 1px;
     border-style: solid;
+}
+.big-rules {
+    font-size: 50px;
+    color: black;
+}
+.start {
+    font-size: 30px;
+    color: black;
+}
+.rules {
+    font-size: 20px;
+    color: black;
+    background-color: white;
+    opacity: 85%;
+}
+.money-counter {
+    font-size: 20px;
+    color: yellowgreen;
+}
+.intro-body {
+    background-image: url('../assets/Stadium.PNG');
+    background-size: cover;
+    background-position: center;
+}
+.team-name {
+    font-weight: bold;
+    color: black;
+}
+.background {
+    background-color: white;
+    opacity: 85%;
 }
