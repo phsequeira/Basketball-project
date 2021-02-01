@@ -1,6 +1,6 @@
 import { players } from '../player-pool.js';
 import { findByPosition } from '../utils.js';
-import { renderTable } from './render-table.js';
+import { renderTable } from '../position-pages/render-table.js';
 
 //empty div to send list data
 const draftablePlayers = document.getElementById('draft-pool');
