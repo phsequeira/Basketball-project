@@ -1,4 +1,5 @@
-import players from '../data/player-pool.js';
+//import players from '../data/player-pool.js';
+import players from './fake-data.js';
 const ul = document.querySelector('ul');
 
 export function renderUl() {

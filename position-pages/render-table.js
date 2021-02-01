@@ -1,5 +1,5 @@
 export function renderTable(playerChose, player) {
-    const price = playerChose.price;
+    const price = playerChose.cost;
     const position = playerChose.position;
     
     const tr = document.createElement('tr');
