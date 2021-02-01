@@ -13,7 +13,7 @@ form.addEventListener('submit', (e) => {
         const stringyUser = JSON.stringify(user);
         localStorage.setItem('USER', stringyUser);
 
-        window.location = './draft-page/index.html';
+        window.location = './position-pages/index.html';
 
 
     });
