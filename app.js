@@ -1,5 +1,22 @@
-// import functions and grab DOM elements
+const form = document.querySelector('form');
 
-// initialize state
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
 
-// set event listeners to update state and DOM
+    const formData = new FormData(form);
+
+    const user = {
+        team: formData.get('team-name'),
+        funds: 10,
+        completed: {},
+        }
+        const stringyUser = JSON.stringify(user);
+        localStorage.setItem('USER', stringyUser);
+
+        window.location = './draft-page/index.html';
+
+
+    });
+
+
+
