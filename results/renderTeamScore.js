@@ -49,3 +49,4 @@ export function renderUserTeam(lineup) {
     teamScoreRow.append(td1, td2);
     table.append(teamScoreRow);
 }
+
