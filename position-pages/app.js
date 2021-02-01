@@ -4,7 +4,6 @@ import { renderTable } from './render-table.js';
 import people from './fake-data.js';
 //import { getPlayer } from '../utils.js';
 
-console.log(people);
 const get = people;
 //const table = getPlayer();
 
