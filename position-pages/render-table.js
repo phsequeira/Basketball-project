@@ -1,9 +1,12 @@
-import { findById } from '../utils.js';
+import { getPlayer } from '../utils.js';
 const table = document.querySelector('table');
 
-function renderTableRow(playerChose, player) {
-    const price = playerChose.cost;
-    const position = playerChose.position;
+const x = getPlayer();
+const y = x.people; 
+
+function renderTableRow(player) {
+    const price = player.cost;
+    const position = player.position;
     
     const tr = document.createElement('tr');
 
@@ -21,12 +24,10 @@ function renderTableRow(playerChose, player) {
 
 }
 
-export function renderTable(people) {
-    for (let player of people) {
-        const member = findById(people, player.id);
-    
+export function renderTable() {
+    for (let player of y) {
         
-        const tableRowDOM = renderTableRow(player, member);
+        const tableRowDOM = renderTableRow(player);
     
         table.append(tableRowDOM);
     }
