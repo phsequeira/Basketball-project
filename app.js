@@ -10,15 +10,15 @@ form.addEventListener('submit', (e) => {
         funds: 10,
         completed: {},
         people: [],    
-    }
+    };
         
-        const stringyUser = JSON.stringify(user);
-        localStorage.setItem('USER', stringyUser);
+    const stringyUser = JSON.stringify(user);
+    localStorage.setItem('USER', stringyUser);
 
-        window.location = './position-pages/index.html';
+    window.location = './position-pages/index.html';
 
 
-    });
+});
 
 
 
