@@ -1,6 +1,6 @@
 import { resultsMessage } from './messages.js';
 
-function createMessage(wins) {
+export function createMessage(wins) {
     if (wins >= 20) {
         return 'superstar';
     } else if (wins >= 10) {
