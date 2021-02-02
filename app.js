@@ -9,16 +9,16 @@ form.addEventListener('submit', (e) => {
         team: formData.get('team-name'),
         funds: 10,
         completed: {},
-        people: [],    
-    }
-        
-        const stringyUser = JSON.stringify(user);
-        localStorage.setItem('USER', stringyUser);
+        people: [], 
+        img: formData.get('team-img')   
+    };
+    const stringyUser = JSON.stringify(user);
+    localStorage.setItem('USER', stringyUser);
 
-        window.location = './position-pages/index.html';
+    window.location = './position-pages/index.html';
 
 
-    });
+});
 
 
 
