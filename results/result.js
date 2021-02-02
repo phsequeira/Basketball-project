@@ -1,5 +1,7 @@
 import { renderUserTeam } from './renderTeamScore.js';
 
+const aboutUs = document.getElementById('about-us');
+
 const user = [
     {   
         id: 'KobeBryant',
@@ -43,3 +45,7 @@ localStorage.setItem('USER', stringyUser);
 const userTeam = JSON.parse(localStorage.getItem('USER'));
 
 renderUserTeam(userTeam);
+
+aboutUs.addEventListener('click', () => {
+    window.location = '../about-us/index.html';
+});
