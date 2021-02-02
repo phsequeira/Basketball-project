@@ -6,6 +6,9 @@ const draftPosition = new URLSearchParams(window.location.search);
 const PositionId = draftPosition.get('id');
 const draftPool = findById(players, PositionId);
 draftDesc.textContent = `Draft Your Player`;
+const draftButton = document.querySelector('button');
+const backToTeam = document.querySelector('#team-button');
+
 
 for (let choice of draftPool.players) {
     const selection = document.createElement('input');
@@ -22,17 +25,35 @@ for (let choice of draftPool.players) {
 
     userPick.append(label);    
 }
-userPick.addEventListener('submit', (action) => {
-    action.preventDefault();
-    const data = new FormData(userPick);
-    const chosenPlayer = data.get('drafted');
+    userPick.appendChild(draftButton);
 
 
-    directUser(userFunds);
+userPick.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(userPick);
+
+    const selectionId = formData.get('drafted');
+   
+
+    const choice = findById(draftPool.players, selectionId);
+    const user = JSON.parse(localStorage.getItem('USER'));
+   
+    user.funds -= choice.cost;
+    user.people.push(choice);
+    
+    localStorage.setItem('USER', JSON.stringify(user));
+
+
+});
+
+backToTeam.addEventListener('click', () => {
+    window.location = '../position-pages';
+
 });
     
 
-function directUser(userFunds){
-    if (userFunds <= 0){
-        setTimeout(function(){window.location = '../Results';}, 5000);
-    } else {setTimeout(function(){window.location = '../position-pages';}, 5000);}}
+//function directUser(userFunds){
+ //   if (userFunds <= 0){
+  //      setTimeout(function(){window.location = '../Results';}, 5000);
+  //  } else {setTimeout(function(){window.location = '../position-pages';}, 5000);}}
