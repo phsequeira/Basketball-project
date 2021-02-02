@@ -1,3 +1,6 @@
+import { resultsMessage } from './messages.js';
+import { createMessage } from './msg-utils.js';
+
 function calculateTeamScore(players) {
     let winShare = 0;
     for (let player of players) {
@@ -15,8 +18,15 @@ export function renderUserTeam(lineup) {
     // calculate team score
     const teamScore = calculateTeamScore(lineup);
     const h3 = document.createElement('h3');
+    const span = document.createElement('span');
     h3.textContent = 'Team Score';
-    div.append(h3, teamScore);
+
+    // calculate results message
+    const userMsg = createMessage(lineup.funds, teamScore);
+    span.textContent = userMsg;
+
+    // append results score & message
+    div.append(h3, teamScore, span);
     
     // render user-selected team 
     for (let player of lineup) {
