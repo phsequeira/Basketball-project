@@ -1,17 +1,21 @@
-import { resultsMessage } from "./messages";
+import { resultsMessage } from './messages.js';
 
-function createMessage(funds, wins) {
-    if (funds >= 2 && wins >= 20) {
+function createMessage(wins) {
+    if (wins >= 20) {
         return 'superstar';
-    } else if (funds === 1 && wins >= 10) {
+    } else if (wins >= 10) {
         return 'pro';
     } else {
         return 'rookie';
     }
 }
 
-export function calculateMessage(funds, wins) {
-    const result = createMessage(funds, wins);
+export function calculateMessage(wins) {
+    const result = createMessage(wins);
 
-    for (let msg of resultsMessage)
+    for (let msg of resultsMessage) {
+        if (msg === result) {
+            return msg;
+        }
+    }
 }
