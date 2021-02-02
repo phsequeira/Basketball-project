@@ -1,0 +1,39 @@
+
+main {
+    
+    background-image: url(../assets/resultsBackground.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    
+}
+
+li img {
+    width: 150px;
+    height: 150px;
+}
+
+ul {
+    display: flex;
+}
+
+ul label {
+    font-size: 25px;
+}
+
+div {
+    border: solid 1px black;
+    width: 400px;
+
+}
+
+#buttons {
+    background: inherit;
+    width: 100px;
+    padding: 0;
+}
+
+#buttons button {
+    width: 100px;
+    height: 100px;
+}
