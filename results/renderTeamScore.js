@@ -1,5 +1,4 @@
-import { resultsMessage } from './messages.js';
-import { createMessage } from './msg-utils.js';
+import { calculateMessage } from './msg-utils.js';
 
 function calculateTeamScore(players) {
     let winShare = 0;
@@ -22,14 +21,8 @@ export function renderUserTeam(lineup) {
     h3.textContent = 'Team Score';
 
     // calculate results message
-    const resultMsg = createMessage(lineup.funds, teamScore);
-    const userMsg = '';
-    for (let msg of resultsMessage) {
-        if (msg === resultMsg) {
-            return msg;
-        }
-    }
-    span.textContent = userMsg;
+    const resultMsg = calculateMessage(teamScore);
+    span.textContent = resultMsg;
 
     // append results score & message
     div.append(h3, teamScore, span);

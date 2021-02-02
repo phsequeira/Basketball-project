@@ -34,5 +34,5 @@ userPick.addEventListener('submit', (action) => {
 
 function directUser(userFunds){
     if (userFunds <= 0){
-        setTimeout(function(){window.location = '../Results';}, 5000);
+        setTimeout(function(){window.location = '../results/index.html';}, 5000);
     } else {setTimeout(function(){window.location = '../position-pages';}, 5000);}}
