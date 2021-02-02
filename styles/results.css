@@ -8,6 +8,15 @@ main {
     
 }
 
+header {
+    justify-content: center;
+}
+
+ul li {
+    justify-content: center;
+    padding: 15px;
+}
+
 li img {
     width: 150px;
     height: 150px;
@@ -39,4 +48,9 @@ div {
     width: 100px;
     height: 100px;
     border-radius: 50%;
+}
+
+#main-section {
+    padding: 20px;
+
 }
