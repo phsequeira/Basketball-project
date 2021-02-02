@@ -18,5 +18,4 @@ export function calculateMessage(wins) {
             return msg;
         }
     }
-
 }
