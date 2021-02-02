@@ -151,3 +151,13 @@ table {
     background-color: white;
     opacity: 85%;
 }
+.team-page {
+    background-image: url('../assets/lockerroom.PNG');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.draft-page {
+    background-image: url('../assets/stage.PNG');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
