@@ -11,7 +11,7 @@ draftDesc.textContent = `Draft Your Player`;
 
 const draftablePlayers = document.getElementById('player-pool');
 
-for (let choice of draftablePlayers.id) {
+for (let choice of draftPool.players) {
     const selection = document.createElement('input');
     const label = document.createElement('label');
     const playerName = document.createElement('p');
