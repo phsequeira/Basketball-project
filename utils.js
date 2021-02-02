@@ -12,7 +12,7 @@ const PLAYER = 'PLAYER';
 const defaultEmptyPlayer = [];
 
 export function getPlayer() {
-    const stringyPlayer = localStorage.getItem(PLAYER);
+    const stringyPlayer = localStorage.getItem('USER');
 
     if (stringyPlayer) {
         // if there is cart parse it

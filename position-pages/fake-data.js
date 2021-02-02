@@ -1,4 +1,4 @@
-const people = [
+/*const people = [
     {
         id: 'kobe',
         cost: 1,
