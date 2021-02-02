@@ -6,8 +6,17 @@ const draftPosition = new URLSearchParams(window.location.search);
 const PositionId = draftPosition.get('id');
 const draftPool = findById(players, PositionId);
 draftDesc.textContent = `Draft Your Player`;
-const draftButton = document.querySelector('button');
+const draftButton = document.querySelector('#draft-button');
 const backToTeam = document.querySelector('#team-button');
+
+
+
+backToTeam.addEventListener('click', () => {
+    
+    
+    window.location = '../position-pages';
+
+});
 
 
 for (let choice of draftPool.players) {
@@ -25,7 +34,9 @@ for (let choice of draftPool.players) {
 
     userPick.append(label);    
 }
+
 userPick.appendChild(draftButton);
+
 
 
 userPick.addEventListener('submit', (e) => {
@@ -44,14 +55,8 @@ userPick.addEventListener('submit', (e) => {
     
     localStorage.setItem('USER', JSON.stringify(user));
 
-
 });
-
-backToTeam.addEventListener('click', () => {
-    window.location = '../position-pages';
-
-});
-    
+ 
 
 function directUser(userFunds){
     if (userFunds <= 0){

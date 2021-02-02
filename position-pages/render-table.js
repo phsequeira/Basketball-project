@@ -2,7 +2,7 @@ import { getPlayer } from '../utils.js';
 const table = document.querySelector('table');
 
 const x = getPlayer();
-const y = x.people; 
+const y = x.people;
 
 function renderTableRow(player) {
     const price = player.cost;
@@ -26,7 +26,8 @@ function renderTableRow(player) {
 
 export function renderTable() {
     for (let player of y) {
-        
+    
+    
         const tableRowDOM = renderTableRow(player);
     
         table.append(tableRowDOM);
