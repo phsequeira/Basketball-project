@@ -1,6 +1,6 @@
 import { calculateMessage } from './msg-utils.js';
 
-function calculateTeamScore(players) {
+export function calculateTeamScore(players) {
     let winShare = 0;
     for (let player of players) {
         winShare += player.wins;
