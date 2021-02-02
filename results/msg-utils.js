@@ -1,6 +1,6 @@
-import { resultsMessage } from "./messages";
+import { resultsMessage } from './messages.js';
 
-function createMessage(funds, wins) {
+export function createMessage(funds, wins) {
     if (funds >= 2 && wins >= 20) {
         return 'superstar';
     } else if (funds === 1 && wins >= 10) {
@@ -12,6 +12,5 @@ function createMessage(funds, wins) {
 
 export function calculateMessage(funds, wins) {
     const result = createMessage(funds, wins);
-
-    for (let msg of resultsMessage)
+    for (let msg of resultsMessage);
 }

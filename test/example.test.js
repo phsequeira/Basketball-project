@@ -1,6 +1,7 @@
 // IMPORT MODULES under test here:
 import { players } from '../data/player-pool.js';
 import { findById } from '../utils.js';
+import { createMessage } from '../results/msg-utils.js';
 // import { example } from '../example.js';
 
 const test = QUnit.test;
@@ -40,4 +41,21 @@ test('locates item by it id characteristics and returns that item.', (expect) =>
     //Expect
     // Make assertions about what is expected versus the actual result
     expect.deepEqual(actual, expected);
+});
+
+test('Return apprpriate message based on funds and wins.', (expect) => {
+    //Arrange
+    // if there are 2 or more funds and 20 or more ins the message should be 'superstar'
+    //if the funds are 1 and the wins are 10 or more the message should be 'pro'
+    //otherwise the message is 'rookie'
+    const funds = 2;
+    const wins = 21;
+    const expected = 'superstar';
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = createMessage(funds, wins);
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.equal(actual, expected);
 });
