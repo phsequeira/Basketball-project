@@ -22,7 +22,13 @@ export function renderUserTeam(lineup) {
     h3.textContent = 'Team Score';
 
     // calculate results message
-    const userMsg = createMessage(lineup.funds, teamScore);
+    const resultMsg = createMessage(lineup.funds, teamScore);
+    const userMsg = '';
+    for (let msg of resultsMessage) {
+        if (msg === resultMsg) {
+            return msg;
+        }
+    }
     span.textContent = userMsg;
 
     // append results score & message
