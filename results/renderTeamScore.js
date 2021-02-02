@@ -8,45 +8,43 @@ function calculateTeamScore(players) {
 
 export function renderUserTeam(lineup) {
     
-    // grab elements
+    // grab target element
     const ul = document.getElementById('result');
-    const table = document.createElement('table');
+    const div = document.getElementById('team-score');
 
+    // calculate team score
+    const teamScore = calculateTeamScore(lineup);
+    const h3 = document.createElement('h3');
+    h3.textContent = 'Team Score';
+    div.append(h3, teamScore);
+    
     // render user-selected team 
     for (let player of lineup) {
         
-        // create player row elements
-        const playerRow = document.createElement('tr');
-        const nameTd = document.createElement('td');
-        const imageTd = document.createElement('td');
+        // create player List Item
+        const playerLabel = document.createElement('label');
+        const playerLi = document.createElement('li');
         const playerImage = document.createElement('img');
 
-        // player row content
-        nameTd.textContent = player.id;
+        // list item content
+        playerLabel.textContent = player.id;
         playerImage.src = player.img;
-        imageTd.append(playerImage);  
 
-        // append td
-        playerRow.append(nameTd, imageTd);
-        
-        
-        // append rows
-        table.append(playerRow);
+        // append image inside label
+        playerLabel.appendChild(playerImage);
 
-        //render to results page
-        ul.append(table);
-    }  
+        // append label to LI
+        playerLi.appendChild(playerLabel);
 
-    const teamScore = calculateTeamScore(lineup);
-
-    // create team score row
-    const teamScoreRow = document.createElement('tr');
-    const td1 = document.createElement('td');
-    const td2 = document.createElement('td');
-    td1.textContent = 'Team Score';
-    td2.textContent = teamScore;
-
-    teamScoreRow.append(td1, td2);
-    table.append(teamScoreRow);
+        // append LI to UL
+        ul.append(playerLi);
+    }
+    
 }
+
+
+
+
+
+    
 
