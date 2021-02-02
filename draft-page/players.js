@@ -50,11 +50,6 @@ userPick.addEventListener('submit', (e) => {
 backToTeam.addEventListener('click', () => {
     window.location = '../position-pages';
 
-    if (document.querySelector('input').checked) {
-        
-        return document.querySelector('input').checked = false;
-    }
-
 });
     
 
