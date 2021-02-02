@@ -72,11 +72,11 @@ const centers = {
         img: '../assets/YaoM.png',
     }]
 };
-const players = [ 
+export const players = [ 
     guards,
     forwards,
     centers,
 ];
 
-export default players;
+
 

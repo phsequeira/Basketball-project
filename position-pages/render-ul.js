@@ -1,4 +1,4 @@
-import players from '../data/player-pool.js';
+import { players } from '../data/player-pool.js';
 const ul = document.querySelector('ul');
 
 export function renderUl() {
