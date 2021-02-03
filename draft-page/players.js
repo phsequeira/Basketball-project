@@ -56,6 +56,7 @@ userPick.addEventListener('submit', (e) => {
     user.people.push(choice);
     
     localStorage.setItem('USER', JSON.stringify(user));
+    alert(`You successfully drafted ${selectionId}!`);
 
     directUser(user.funds, roster);
 
