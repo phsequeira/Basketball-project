@@ -2,6 +2,7 @@
 import { players } from '../data/player-pool.js';
 import { findById } from '../utils.js';
 import { createMessage } from '../results/msg-utils.js';
+import { calculateTeamScore } from '../results/renderTeamScore.js';
 // import { example } from '../example.js';
 
 const test = QUnit.test;
@@ -44,5 +45,20 @@ test('Return apprpriate message based on funds and wins.', (expect) => {
     const wins = 21;
     const expected = 'superstar';
     const actual = createMessage(wins);
+    expect.equal(actual, expected);
+});
+test('Return apprpriate message based on funds and wins.', (expect) => {
+
+    // if there are 2 or more funds and 20 or more ins the message should be 'superstar'
+    //if the funds are 1 and the wins are 10 or more the message should be 'pro'
+    //otherwise the message is 'rookie'
+    const players1 = [
+        { id: 'Damon Stoudamire', cost: 1, wins: 5.9, position: 'PG', img: '../assets/DamonStoudamire.PNG' },
+        { id: 'Damien Lillard', cost: 2, wins: 11.6, position: 'PG', img: '../assets/DamianLillard.PNG' },
+        { id: 'Vince Carter', cost: 3, wins: 6, position: 'SF', img: '../assets/VC.png' },
+        { id: 'Tracy Mcgrady', cost: 2, wins: 8.4, position: 'SF', img: '../assets/TMac.png' },
+        { id: 'Greg Oden', cost: 1, wins: 4.6, position: 'C', img: '../assets/gregO.png' }];
+    const expected = 36.5;
+    const actual = calculateTeamScore(players1);
     expect.equal(actual, expected);
 });
