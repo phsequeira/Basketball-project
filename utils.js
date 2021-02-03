@@ -34,3 +34,11 @@ export function clearTeam() {
     
     localStorage.setItem(PLAYER, stringydefaultPlayer);
 }
+
+
+
+export function renderLogo() {
+    const logo = document.getElementById('logo');
+    const user = getPlayer();
+    logo.src = '../assets/logos/' + user.id + '.png';
+}
