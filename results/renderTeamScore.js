@@ -18,14 +18,16 @@ export function renderUserTeam(lineup) {
     const teamScore = calculateTeamScore(lineup);
     const h3 = document.createElement('h3');
     const span = document.createElement('span');
+    const scoreSpan = document.createElement('span');
     h3.textContent = 'Team Score';
 
     // calculate results message
     const resultMsg = calculateMessage(teamScore);
     span.textContent = resultMsg;
+    scoreSpan.textContent = teamScore;
 
     // append results score & message
-    div.append(h3, teamScore, span);
+    div.append(h3, scoreSpan, span);
     
     // render user-selected team 
     for (let player of lineup) {
