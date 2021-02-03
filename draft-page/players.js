@@ -57,10 +57,12 @@ userPick.addEventListener('submit', (e) => {
     
     localStorage.setItem('USER', JSON.stringify(user));
 
+    directUser(user.funds);
+
 });
  
 
 export function directUser(userFunds){
     if (userFunds <= 0){
-        setTimeout(function(){window.location = '../results/index.html';}, 5000);
-    } else {setTimeout(function(){window.location = '../position-pages';}, 5000);}}
+        setTimeout(function(){window.location = '../results/index.html';}, 1000);
+    } else {setTimeout(function(){window.location = '../position-pages';}, 1000);}}
