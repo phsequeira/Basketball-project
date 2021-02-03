@@ -16,6 +16,7 @@ form.addEventListener('submit', (e) => {
     localStorage.setItem('USER', stringyUser);
 
 
+
     window.location = './position-pages/index.html';
 
 

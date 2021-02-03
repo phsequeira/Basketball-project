@@ -35,7 +35,9 @@ for (let choice of draftPool.players) {
     userPick.append(label);    
 }
 
+
 userPick.appendChild(draftButton);
+
 
 
 
@@ -58,7 +60,7 @@ userPick.addEventListener('submit', (e) => {
 });
  
 
-function directUser(userFunds){
+export function directUser(userFunds){
     if (userFunds <= 0){
         setTimeout(function(){window.location = '../results/index.html';}, 5000);
     } else {setTimeout(function(){window.location = '../position-pages';}, 5000);}}
