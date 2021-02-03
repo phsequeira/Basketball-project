@@ -5,20 +5,45 @@ const guards = {
     players: [{
         id: 'Damon Stoudamire',
         cost: 1,
-        wins: 5.9,
+        wins: 4,
         position: 'PG',
         img: '../assets/DamonStoudamire.PNG',
     }, {
-        id: 'Damien Lillard',
+        id: 'Victor Oladipo',
+        cost: 1,
+        wins: 5,
+        position: 'SG'
+    }, {
+        id: 'CJ McCollum',
         cost: 2,
-        wins: 11.6,
+        wins: 8,
+        position: 'SG',
+    }, {
+        id: 'Kyle Lowry',
+        cost: 2,
+        wins: 7,
+        position: 'PG',
+    }, {
+        id: 'Manu Ginobili',
+        cost: 3,
+        wins: 11,
+        position: 'SG',
+    }, {
+        id: 'Damien Lillard',
+        cost: 3,
+        wins: 12,
         position: 'PG',
         img: '../assets/DamianLillard.PNG',
+    }, {
+        id: 'Steph Curry',
+        cost: 4,
+        wins: 15,
+        position: 'PG'
     }, {   
         id: 'Kobe Bryant',
-        cost: 3,
-        wins: 10.7,
-        position: 'PG',
+        cost: 4,
+        wins: 16,
+        position: 'SG',
         img: '../assets/KobeBryant.PNG',
     }]
 };
@@ -28,21 +53,46 @@ const forwards = {
     title: 'Select A Gaurd',
     description: 'The Forwards are you mid range shooters that help keep the ball moving, fast and agile.',
     players: [{
+        id: 'Andrew Wiggins',
+        cost: 1,
+        wins: 4,
+        position: 'SF'
+    }, {
+        id: 'LaMarcus Aldridge',
+        cost: 1,
+        wins: 5,
+        position: 'PF'
+    }, {
         id: 'Vince Carter',
-        cost: 3,
-        wins: 6,
+        cost: 2,
+        wins: 8,
         position: 'SF',
         img: '../assets/VC.png',
     }, {
-        id: 'Tracy Mcgrady',
+        id: "Blake Griffin",
         cost: 2,
-        wins: 8.4,
+        wins: 7,
+        position: 'PF'
+    }, {
+        id: "Tim Duncan",
+        cost: 3,
+        wins: 11,
+        position: 'PF',
+    }, {
+        id: 'Tracy Mcgrady',
+        cost: 3,
+        wins: 10,
         position: 'SF',
         img: '../assets/TMac.png',
-    }, {   
+    }, {
+        id: 'Dirk Nowitzki',
+        cost: 4,
+        wins: 15,
+        position: 'PF'
+    },{   
         id: 'Lebron James',
         cost: 4,
-        wins: 9.8,
+        wins: 16,
         position: 'SF',
         img: '../assets/LbronJ.png',
     }]

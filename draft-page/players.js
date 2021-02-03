@@ -29,7 +29,7 @@ for (let choice of draftPool.players) {
     const playerPic = document.createElement('img');
     playerName.textContent = choice.id + ` $${choice.cost}`;
     selection.type = 'radio';
-    selection.value = choice.id;;
+    selection.value = choice.id;
     selection.name = 'drafted';
     playerPic.src = choice.img;
     label.append(playerName, playerPic, selection);
@@ -58,6 +58,7 @@ userPick.addEventListener('submit', (e) => {
     user.people.push(choice);
     
     localStorage.setItem('USER', JSON.stringify(user));
+    alert(`You successfully drafted ${selectionId}!`);
 
     directUser(user.funds, roster);
 
