@@ -23,7 +23,7 @@ export function getPlayer() {
     else {
         //if there is no cart stringify empty cart
         const stringydefaultPlayer = JSON.stringify(defaultEmptyPlayer);
-        localStorage.setItem(PLAYER, stringydefaultPlayer);
+        localStorage.setItem('USER', stringydefaultPlayer);
 
         return defaultEmptyPlayer;
     }

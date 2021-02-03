@@ -3,6 +3,7 @@ const table = document.querySelector('table');
 
 const x = getPlayer();
 const y = x.people;
+
 function renderTableRow(player) {
     const price = player.cost;
     const position = player.position;

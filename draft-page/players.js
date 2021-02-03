@@ -34,7 +34,11 @@ for (let choice of draftPool.players) {
 
     userPick.append(label);    
 }
+
+
 userPick.appendChild(draftButton);
+
+
 
 
 userPick.addEventListener('submit', (e) => {
@@ -53,11 +57,8 @@ userPick.addEventListener('submit', (e) => {
     
     localStorage.setItem('USER', JSON.stringify(user));
 
-
 });
-
-
-    
+ 
 
 export function directUser(userFunds){
     if (userFunds <= 0){
