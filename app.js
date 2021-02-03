@@ -10,7 +10,7 @@ form.addEventListener('submit', (e) => {
         funds: 10,
         completed: {},
         people: [], 
-        img: formData.get('team-img')   
+        id: formData.get('team-img')   
     };
     const stringyUser = JSON.stringify(user);
     localStorage.setItem('USER', stringyUser);
