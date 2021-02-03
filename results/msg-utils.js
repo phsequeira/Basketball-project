@@ -1,6 +1,6 @@
 
 
-export function createMessage(wins) {
+function createMessage(wins) {
     if (wins >= 20) {
         return 'Your team had over 20 wins! You are a superstar!!';
     } else if (wins >= 10) {

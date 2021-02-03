@@ -3,7 +3,7 @@ import { calculateMessage } from './msg-utils.js';
 export function calculateTeamScore(players) {
     let winShare = 0;
     for (let player of players) {
-        winShare += player.wins;
+        winShare += Math.round(player.wins);
     }
     return winShare;
 }
@@ -12,22 +12,24 @@ export function renderUserTeam(lineup) {
     
     // grab target element
     const ul = document.getElementById('result');
-    const div = document.getElementById('team-score');
+    const resultsDisplay = document.getElementById('results-display');
 
     // calculate team score
     const teamScore = calculateTeamScore(lineup);
-    const h3 = document.createElement('h3');
-    const span = document.createElement('span');
     const scoreSpan = document.createElement('span');
-    h3.textContent = 'Team Score';
+    const span = document.createElement('span');
+
+    // add class lists for spans
+    scoreSpan.classList.add('score-span');
+    span.classList.add('message-span');
 
     // calculate results message
     const resultMsg = calculateMessage(teamScore);
     span.textContent = resultMsg;
-    scoreSpan.textContent = teamScore;
+    scoreSpan.textContent = `Season Wins: ${teamScore} games`;
 
     // append results score & message
-    div.append(h3, scoreSpan, span);
+    resultsDisplay.append(scoreSpan, span);
     
     // render user-selected team 
     for (let player of lineup) {
@@ -38,7 +40,7 @@ export function renderUserTeam(lineup) {
         const playerImage = document.createElement('img');
 
         // list item content
-        playerLabel.textContent = player.id;
+        playerLabel.textContent = `${player.id} / ${player.position}`;
         playerImage.src = player.img;
 
         // append image inside label
