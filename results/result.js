@@ -16,4 +16,4 @@ aboutUs.addEventListener('click', () => {
 newTeam.addEventListener('click', () => {
     clearTeam();
     window.location = '../index.html';
-})
+});
