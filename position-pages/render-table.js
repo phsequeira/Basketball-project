@@ -13,12 +13,14 @@ function renderTableRow(player) {
     const nameTd = document.createElement('td');
     const positionTd = document.createElement('td');
     const priceTd = document.createElement('td');
+    const dropTd = document.createElement('td');
 
     nameTd.textContent = player.id;
     positionTd.textContent = position;
     priceTd.textContent = price;
+    dropTd.innerHTML = '<button id=dropButton>Drop Player</button>';
 
-    tr.append(nameTd, positionTd, priceTd);
+    tr.append(nameTd, positionTd, priceTd, dropTd);
 
     return tr;
 
