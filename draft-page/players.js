@@ -62,7 +62,7 @@ userPick.addEventListener('submit', (e) => {
 });
  
 
-export function directUser(userFunds){
+function directUser(userFunds){
     if (userFunds <= 0 || user.people.length === 5){
         setTimeout(function(){window.location = '../results/index.html';}, 1000);
     } else {setTimeout(function(){window.location = '../position-pages';}, 1000);}}
