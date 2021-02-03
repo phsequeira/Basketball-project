@@ -12,7 +12,7 @@ const user = JSON.parse(localStorage.getItem('USER'));
 const roster = user.people.length;
 
 header();
-renderLogo()
+renderLogo();
 
 backToTeam.addEventListener('click', () => {
     

@@ -1,1 +1,30 @@
 /* add home page styles here */
+button {
+  display: block;
+  border: 0;
+  background: #b16400;
+  border-radius: 4px;
+  box-shadow: 0 5px 0 #ff7b00;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-size: 20px;
+  margin: 0;
+  outline: 0;
+  transition: all .1s linear;
+}
+button:active {
+  box-shadow: 0 2px 0 #006599;
+  transform: translateY(3px);
+}
+img{
+    
+    cursor: pointer;
+    opacity:0.5;
+}
+img:hover {
+    opacity:1;
+}
+.team-pic {
+   visibility:hidden;
+}
