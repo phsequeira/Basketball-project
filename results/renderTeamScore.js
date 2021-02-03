@@ -1,10 +1,16 @@
 import { calculateMessage } from './msg-utils.js';
+import { getPlayer } from '../utils.js';
 
 export function calculateTeamScore(players) {
+    const user = getPlayer();
+   
     let winShare = 0;
     for (let player of players) {
         winShare += Math.round(player.wins);
     }
+    if (user.posWorth === 289) {
+        winShare += 7;
+    } 
     return winShare;
 }
 
@@ -54,6 +60,7 @@ export function renderUserTeam(lineup) {
     }
     
 }
+
 
 
 

@@ -57,6 +57,7 @@ userPick.addEventListener('submit', (e) => {
     const user = JSON.parse(localStorage.getItem('USER'));
     if (choice.cost <= user.funds){
         alert(`You successfully drafted ${selectionId}!`);
+        user.posWorth += choice.posWorth;
         user.funds -= choice.cost;
         user.people.push(choice);
         directUser(user.funds, roster);
