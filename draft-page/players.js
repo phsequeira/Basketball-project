@@ -1,5 +1,5 @@
 import { players } from '../data/player-pool.js';
-import { findById } from '../utils.js';
+import { findById, header, renderLogo } from '../utils.js';
 const draftDesc = document.querySelector('p');
 const userPick = document.querySelector('form');
 const draftPosition = new URLSearchParams(window.location.search);
@@ -9,6 +9,8 @@ draftDesc.textContent = `Draft Your Player`;
 const draftButton = document.querySelector('#draft-button');
 const backToTeam = document.querySelector('#team-button');
 
+header();
+renderLogo();
 
 
 backToTeam.addEventListener('click', () => {
