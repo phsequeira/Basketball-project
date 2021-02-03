@@ -76,13 +76,13 @@ const forwards = {
         position: 'SF',
         img: '../assets/VC.png',
     }, {
-        id: "Blake Griffin",
+        id: 'Blake Griffin',
         cost: 2,
         wins: 7,
         position: 'PF',
         img: '../assets/bg.PNG',
     }, {
-        id: "Tim Duncan",
+        id: 'Tim Duncan',
         cost: 3,
         wins: 11,
         position: 'PF',
@@ -98,7 +98,8 @@ const forwards = {
         cost: 4,
         wins: 15,
         position: 'PF',
-        img: '../assets/dn.PNG',
+        img: '../assets/dn.PNG'
+
     }, {   
         id: 'Lebron James',
         cost: 4,

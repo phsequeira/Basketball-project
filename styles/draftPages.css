@@ -44,3 +44,31 @@ button {
     padding: 10px;
     margin: 10px;
 }
+header {
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--color3);
+    height: var(--header-height);
+    box-shadow: var(--shadow);
+    
+}
+h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.gutter-right {
+    margin-right: 20px;
+}
+input[type=radio]{
+    position: absolute;
+    opacity: 0
+}
+
+input[type="radio"]:checked + label{
+border: limegreen solid .5em;
+}
+#draft-button{
+    background-color: limegreen;
+}
+

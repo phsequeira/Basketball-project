@@ -1,21 +1,16 @@
-import { resultsMessage } from './messages.js';
 
-export function createMessage(wins) {
+
+function createMessage(wins) {
     if (wins >= 20) {
-        return 'superstar';
+        return 'Your team had over 20 wins! You are a superstar!!';
     } else if (wins >= 10) {
-        return 'pro';
+        return 'Your team had over 10 wins!! You are a pro!';
     } else {
-        return 'rookie';
+        return 'Your team had less than 10 wins. You are a rookie...';
     }
 }
 
 export function calculateMessage(wins) {
     const result = createMessage(wins);
-
-    for (let msg of resultsMessage) {
-        if (msg === result) {
-            return msg;
-        }
-    }
+    return result;
 }

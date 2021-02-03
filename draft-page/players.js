@@ -1,5 +1,5 @@
 import { players } from '../data/player-pool.js';
-import { findById } from '../utils.js';
+import { findById, header, renderLogo } from '../utils.js';
 const draftDesc = document.querySelector('p');
 const userPick = document.querySelector('form');
 const draftPosition = new URLSearchParams(window.location.search);
@@ -8,8 +8,11 @@ const draftPool = findById(players, PositionId);
 draftDesc.textContent = `Draft Your Player`;
 const draftButton = document.querySelector('#draft-button');
 const backToTeam = document.querySelector('#team-button');
+const user = JSON.parse(localStorage.getItem('USER'));
+const roster = user.people.length;
 
-
+header();
+renderLogo();
 
 backToTeam.addEventListener('click', () => {
     
@@ -25,7 +28,6 @@ for (let choice of draftPool.players) {
     const playerName = document.createElement('p');
     const playerPic = document.createElement('img');
     playerName.textContent = choice.id + ` $${choice.cost}`;
-    
     selection.type = 'radio';
     selection.value = choice.id;
     selection.name = 'drafted';
@@ -56,13 +58,14 @@ userPick.addEventListener('submit', (e) => {
     user.people.push(choice);
     
     localStorage.setItem('USER', JSON.stringify(user));
+    alert(`You successfully drafted ${selectionId}!`);
 
-    directUser(user.funds);
+    directUser(user.funds, roster);
 
 });
  
 
-export function directUser(userFunds){
-    if (userFunds <= 0 || user.people.length === 5){
+function directUser(userFunds, roster){
+    if (userFunds <= 0 || roster === 4){
         setTimeout(function(){window.location = '../results/index.html';}, 1000);
     } else {setTimeout(function(){window.location = '../position-pages';}, 1000);}}
