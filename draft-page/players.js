@@ -52,20 +52,17 @@ userPick.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const formData = new FormData(userPick);
-
     const selectionId = formData.get('drafted');
-   
-
+    
     const choice = findById(draftPool.players, selectionId);
     const user = JSON.parse(localStorage.getItem('USER'));
     if (choice.cost <= user.funds){
-        alert(`You successfully drafted ${selectionId}!`);
         user.posWorth += choice.posWorth;
         user.funds -= choice.cost;
         user.people.push(choice);
         directUser(user.funds, roster);
         localStorage.setItem('USER', JSON.stringify(user));
-    } else alert('You cant afford this draft!');
+       } else alert('You cant afford to draft this player!');
 });
  
 
