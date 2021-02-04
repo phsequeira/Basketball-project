@@ -37,7 +37,7 @@ section {
     margin-bottom: var(--gutter);
     border: solid 2px var(--color1);
     background-color: white;
-    opacity: 89%;
+    opacity: 95%;
     border-radius: 4%;
 }
 
@@ -132,7 +132,7 @@ table {
     font-size: 20px;
     color: black;
     background-color: white;
-    opacity: 85%;
+    
 }
 .money-counter {
     font-size: 20px;
@@ -149,15 +149,19 @@ table {
 }
 .background {
     background-color: white;
-    opacity: 85%;
+   
 }
 .team-page {
     background-image: url('../assets/lockerroom.PNG');
     background-repeat: no-repeat;
     background-size: cover;
+    
 }
 .draft-page {
     background-image: url('../assets/stage.PNG');
     background-repeat: no-repeat;
     background-size: cover;
+}
+.aboutme-background {
+    background-color: cornflowerblue;
 }

@@ -15,7 +15,7 @@ export function calculateTeamScore(players) {
 }
 
 export function renderUserTeam(lineup) {
-    
+    const user = getPlayer();
     // grab target element
     const ul = document.getElementById('result');
     const resultsDisplay = document.getElementById('results-display');
@@ -33,18 +33,24 @@ export function renderUserTeam(lineup) {
     const resultMsg = calculateMessage(teamScore);
     span.textContent = resultMsg;
     scoreSpan.textContent = `Season Wins: ${teamScore} games`;
-
+    
     // append results score & message
     resultsDisplay.append(scoreSpan, span);
+    const teamName = document.getElementById('team-display');
+    teamName.textContent = `Lets see how ${user.team} stacks up!`;
+   
     
     // render user-selected team 
+    
     for (let player of lineup) {
         
         // create player List Item
+        
         const playerLabel = document.createElement('label');
         const playerLi = document.createElement('li');
         const playerImage = document.createElement('img');
 
+        
         // list item content
         playerLabel.textContent = `${player.id} / ${player.position}`;
         playerImage.src = player.img;
@@ -60,6 +66,8 @@ export function renderUserTeam(lineup) {
     }
     
 }
+
+
 
 
 
