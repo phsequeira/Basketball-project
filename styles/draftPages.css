@@ -12,6 +12,7 @@ background-repeat: no-repeat;
 background-size: cover;
 }
 .draft-page {
+    display: grid;
     height: 100%;
     width: 100%;
     font-family: cursive;
@@ -24,6 +25,7 @@ section p{
 }
 form {
     display: grid;
+    grid-template-columns: 1fr 1fr;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -33,7 +35,8 @@ form label{
     background-color: black;
 }
 label p {
-color: crimson;
+    color: crimson;
+    display: grid;
 }
 button {
     width: 100%;
@@ -61,7 +64,7 @@ h2 {
 }
 
 #draft-button{
-    background-color: limegreen;
+    display: none;
 }
 .playerPic{
     height: 30em;

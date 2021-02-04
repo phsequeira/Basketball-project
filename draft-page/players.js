@@ -27,20 +27,23 @@ for (let choice of draftPool.players) {
     const label = document.createElement('label');
     const playerName = document.createElement('p');
     const playerPic = document.createElement('img');
+    const draft = document.createElement('button');
     playerName.textContent = choice.id + ` $${choice.cost}`;
     selection.type = 'radio';
     selection.value = choice.id;
     selection.name = 'drafted';
-    selection.className = 'chosenPlayer';
     playerPic.src = choice.img;
     playerPic.className = 'playerPic';
-    label.append(playerName, selection, playerPic);
+    draft.textContent = 'Draft Player';
+    draft.style.backgroundColor = 'chartreuse';
+    draft.append(draftButton);
+    label.append(playerName, selection, playerPic, draft);
 
     userPick.append(label);    
 }
 
 
-userPick.appendChild(draftButton);
+// userPick.appendChild();
 
 
 
