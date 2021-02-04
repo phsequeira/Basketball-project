@@ -95,25 +95,6 @@ footer {
     background-color: var(--color3);
     box-shadow: var(--shadow);
 }
-  
-  @keyframes pulse {
-    20% {
-      transform: rotate3d(-10, -10, -10, 50deg) scale(1.2);
-    }
-
-    40% {
-        transform: rotate3d(10, 10, -10, 50deg) scale(1);
-    }
-
-    60% {
-        transform: rotate3d(-10, 10, 10, 50deg) scale(1.2);
-      }
-
-    80% {
-        transform: rotate3d(10, 10, 10, 50deg) scale(1);
-    }
-
-  }
 
 table {
     width: 100%;
@@ -142,6 +123,7 @@ table {
     background-image: url('../assets/Stadium.PNG');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
 .team-name {
     font-weight: bold;
@@ -155,12 +137,14 @@ table {
     background-image: url('../assets/lockerroom.PNG');
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     
 }
 .draft-page {
     background-image: url('../assets/stage.PNG');
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 .aboutme-background {
     background-color: cornflowerblue;
