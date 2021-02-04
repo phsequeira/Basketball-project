@@ -37,7 +37,7 @@ export function renderUserTeam(lineup) {
     // append results score & message
     resultsDisplay.append(scoreSpan, span);
     const teamName = document.getElementById('team-display');
-    teamName.textContent = `Lets see how ${user.team} stacks up!`;
+    teamName.textContent = `Lets see how team ${user.team} stacks up!`;
    
     
     // render user-selected team 
