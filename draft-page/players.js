@@ -57,6 +57,7 @@ userPick.addEventListener('submit', (e) => {
     const user = JSON.parse(localStorage.getItem('USER'));
     if (choice.cost <= user.funds){
         alert(`You successfully drafted ${selectionId}!`);
+        user.posWorth += choice.posWorth;
         user.funds -= choice.cost;
         user.people.push(choice);
         directUser(user.funds, roster);
@@ -67,6 +68,6 @@ userPick.addEventListener('submit', (e) => {
 
 function directUser(userFunds, roster){
     if (userFunds <= 0 || roster === 4){
-        setTimeout(function(){window.location = '../results/index.html';}, 1000);
-    } else {setTimeout(function(){window.location = '../position-pages';}, 1000);}}
+        setTimeout(function(){window.location = '../results/index.html';}, 100);
+    } else {setTimeout(function(){window.location = '../position-pages';}, 100);}}
 
