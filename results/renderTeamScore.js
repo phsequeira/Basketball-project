@@ -1,52 +1,63 @@
-function calculateTeamScore(players) {
+import { calculateMessage } from './msg-utils.js';
+
+export function calculateTeamScore(players) {
     let winShare = 0;
     for (let player of players) {
-        winShare += player.wins;
+        winShare += Math.round(player.wins);
     }
     return winShare;
 }
 
 export function renderUserTeam(lineup) {
     
-    // grab elements
+    // grab target element
     const ul = document.getElementById('result');
-    const table = document.createElement('table');
+    const resultsDisplay = document.getElementById('results-display');
 
+    // calculate team score
+    const teamScore = calculateTeamScore(lineup);
+    const scoreSpan = document.createElement('span');
+    const span = document.createElement('span');
+
+    // add class lists for spans
+    scoreSpan.classList.add('score-span');
+    span.classList.add('message-span');
+
+    // calculate results message
+    const resultMsg = calculateMessage(teamScore);
+    span.textContent = resultMsg;
+    scoreSpan.textContent = `Season Wins: ${teamScore} games`;
+
+    // append results score & message
+    resultsDisplay.append(scoreSpan, span);
+    
     // render user-selected team 
     for (let player of lineup) {
         
-        // create player row elements
-        const playerRow = document.createElement('tr');
-        const nameTd = document.createElement('td');
-        const imageTd = document.createElement('td');
+        // create player List Item
+        const playerLabel = document.createElement('label');
+        const playerLi = document.createElement('li');
         const playerImage = document.createElement('img');
 
-        // player row content
-        nameTd.textContent = player.id;
+        // list item content
+        playerLabel.textContent = `${player.id} / ${player.position}`;
         playerImage.src = player.img;
-        imageTd.append(playerImage);  
 
-        // append td
-        playerRow.append(nameTd, imageTd);
-        
-        
-        // append rows
-        table.append(playerRow);
+        // append image inside label
+        playerLabel.appendChild(playerImage);
 
-        //render to results page
-        ul.append(table);
-    }  
+        // append label to LI
+        playerLi.appendChild(playerLabel);
 
-    const teamScore = calculateTeamScore(lineup);
-
-    // create team score row
-    const teamScoreRow = document.createElement('tr');
-    const td1 = document.createElement('td');
-    const td2 = document.createElement('td');
-    td1.textContent = 'Team Score';
-    td2.textContent = teamScore;
-
-    teamScoreRow.append(td1, td2);
-    table.append(teamScoreRow);
+        // append LI to UL
+        ul.append(playerLi);
+    }
+    
 }
+
+
+
+
+
+    
 

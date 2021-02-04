@@ -1,13 +1,72 @@
-import { players } from '../player-pool.js';
-import { findByPosition } from '../utils.js';
-import { renderTable } from '../position-pages/render-table.js';
+import { players } from '../data/player-pool.js';
+import { findById, header, renderLogo } from '../utils.js';
+const draftDesc = document.querySelector('p');
+const userPick = document.querySelector('form');
+const draftPosition = new URLSearchParams(window.location.search);
+const PositionId = draftPosition.get('id');
+const draftPool = findById(players, PositionId);
+draftDesc.textContent = `Draft Your Player`;
+const draftButton = document.querySelector('#draft-button');
+const backToTeam = document.querySelector('#team-button');
+const user = JSON.parse(localStorage.getItem('USER'));
+const roster = user.people.length;
 
-//empty div to send list data
-const draftablePlayers = document.getElementById('draft-pool');
-//loop through books array
-for (const player of players){
-    const newPlayer = findByPosition(players, player.position);
-    const draftable = renderTable(players, newPlayer);
+header();
+renderLogo();
+
+backToTeam.addEventListener('click', () => {
     
-    draftablePlayers.appendChild(draftable);
+    
+    window.location = '../position-pages';
+
+});
+
+
+for (let choice of draftPool.players) {
+    const selection = document.createElement('input');
+    const label = document.createElement('label');
+    const playerName = document.createElement('p');
+    const playerPic = document.createElement('img');
+    playerName.textContent = choice.id + ` $${choice.cost}`;
+    selection.type = 'radio';
+    selection.value = choice.id;
+    selection.name = 'drafted';
+    selection.className = 'chosenPlayer';
+    playerPic.src = choice.img;
+    playerPic.className = 'playerPic';
+    label.append(playerName, selection, playerPic);
+
+    userPick.append(label);    
 }
+
+
+userPick.appendChild(draftButton);
+
+
+
+
+userPick.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(userPick);
+
+    const selectionId = formData.get('drafted');
+   
+
+    const choice = findById(draftPool.players, selectionId);
+    const user = JSON.parse(localStorage.getItem('USER'));
+    if (choice.cost <= user.funds){
+        alert(`You successfully drafted ${selectionId}!`);
+        user.funds -= choice.cost;
+        user.people.push(choice);
+        directUser(user.funds, roster);
+        localStorage.setItem('USER', JSON.stringify(user));
+    } else alert('You cant afford this draft!');
+});
+ 
+
+function directUser(userFunds, roster){
+    if (userFunds <= 0 || roster === 4){
+        setTimeout(function(){window.location = '../results/index.html';}, 1000);
+    } else {setTimeout(function(){window.location = '../position-pages';}, 1000);}}
+

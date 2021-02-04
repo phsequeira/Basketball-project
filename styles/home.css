@@ -1,1 +1,40 @@
 /* add home page styles here */
+.name-input {
+  display: grid;
+  margin: auto;
+}
+button {
+  display: grid;
+  border: 0;
+  background: #b16400;
+  border-radius: 4px;
+  box-shadow: 0 5px 0 #ff7b00;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-size: 20px;
+  margin: auto;
+  outline: 0;
+  transition: all .1s linear;
+}
+button:active {
+  box-shadow: 0 2px 0 #006599;
+  transform: translateY(3px);
+}
+img{
+    cursor: pointer;
+    opacity:0.5;
+}
+img:hover {
+    opacity:1;
+}
+img:active {
+  opacity: 1;
+}
+.team-pic {
+   /*visibility:hidden;*/
+   opacity: 0;
+}
+input:checked {
+  opacity: 1;
+}

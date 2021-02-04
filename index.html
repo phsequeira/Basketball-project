@@ -14,14 +14,14 @@
 
 <body class="intro-body">
     <header class="money-counter">
-       You have 10$ left
+        <h2 class="about-us-redirect"><a href="../about-us/index.html">About Us</a></h2>
     </header>
     <main>
         <section class="main-section">
             <p>
                 <div class="start">Buy your basketball team and see how many wins the team will have!</div>
                <div class="big-rules">Rules!</div>
-               <div class="rules">You start with 10$.</div>
+               <div class="rules">You start with $10.</div>
                <div class="rules">You will pick 2 gaurds, 2 forwards and 1 center.</div>
                <div class="rules">make sure your budget for a entire 5 man team.</div>
             </p>
@@ -31,12 +31,40 @@
            <div class="background">
             <label>
                 What is your team name?
-                <input name="team-name">
+                <br>
+                <input class="name-input" name="team-name">
+            </label>
+            <br>
+            <label>
+                Pick a Team Logo
+                <br>
+                <label>
+                    <img  src="./assets/logos/bird.png" height="100">
+                    <input required value="bird" type="radio" name='team-img' class="team-pic"> 
+                </label>
+                <label>
+                    <img  src="./assets/logos/cat.png" height="100">
+                    <input required value="cat" type="radio" name='team-img' class="team-pic"> 
+                </label>
+                <label>
+                    <img src="./assets/logos/dog.png" height="100">               
+                    <input required value="dog" type="radio" name='team-img' class="team-pic">
+                </label>
+                <label>
+                    <img src="./assets/logos/sloth.png" height="100">
+                    <input required value="sloth" type="radio" name='team-img' class="team-pic">
+                </label>
+                <label>
+                    <img src="./assets/logos/yak.png" height="110">
+                    <input required value="yak" type="radio" name='team-img' class="team-pic">
+                </label>
+                <br>
             </label>
             <button>Submit form</button>
         </div>
+
         </section>
-    </form>
+        
     </main>
     <footer>
         

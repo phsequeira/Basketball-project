@@ -1,0 +1,57 @@
+body {
+    background-image: url('../assets/resultsBackground.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgb(69, 75, 82);
+}
+
+main {
+    display: flex;
+}
+
+/* team container styling */
+#main-section {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr ;
+    justify-content: space-around;
+}
+
+/* list item styling */
+
+li {
+    display: grid;
+    margin: 10px;
+}
+
+li img {
+    width: 130px;
+    height: 130px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    font-weight: bolder;
+}
+/* results display styling */
+
+.score-span {
+    font-size: 25px;
+}
+
+.message-span {
+    font-size: 25px;
+}
+
+button:hover {
+    border: royalblue 3px solid;
+}
+
+

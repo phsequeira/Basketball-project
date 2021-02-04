@@ -12,7 +12,7 @@ const PLAYER = 'PLAYER';
 const defaultEmptyPlayer = [];
 
 export function getPlayer() {
-    const stringyPlayer = localStorage.getItem(PLAYER);
+    const stringyPlayer = localStorage.getItem('USER');
 
     if (stringyPlayer) {
         // if there is cart parse it
@@ -23,7 +23,7 @@ export function getPlayer() {
     else {
         //if there is no cart stringify empty cart
         const stringydefaultPlayer = JSON.stringify(defaultEmptyPlayer);
-        localStorage.setItem(PLAYER, stringydefaultPlayer);
+        localStorage.setItem('USER', stringydefaultPlayer);
 
         return defaultEmptyPlayer;
     }
@@ -33,4 +33,12 @@ export function clearTeam() {
     const stringydefaultPlayer = JSON.stringify(defaultEmptyPlayer);
     
     localStorage.setItem(PLAYER, stringydefaultPlayer);
+}
+
+
+
+export function renderLogo() {
+    const logo = document.getElementById('logo');
+    const user = getPlayer();
+    logo.src = '../assets/logos/' + user.id + '.png';
 }

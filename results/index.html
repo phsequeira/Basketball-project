@@ -6,34 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="./styles/home.css">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/results.css">
     <title>Results</title>
 </head>
 
 <body>
-    <header>
-      Lets see how your team stacks up!
-    </header>
+   
     <main>
-
         <section class="main-section">
-           <ul id="result">
-
-
-           </ul>
+            <h1>Lets see how your team stacks up!</h1>
+            <ul id="result"></ul>
         </section>
 
-        <section id="buttons">
-            <button id="reset-team">Reset</button>
+        
+        <!-- results display -->
+        <section id="results-display">
+            <div class="button-container">
+                <button id="reset-team">New Team</button>
+                <button id='about-us'>About Us</button>
+            </div>
         </section>
   
     </main>
-    <footer>
-       
-    </footer>
-
     <script type="module" src="./result.js"></script>
 </body>
 

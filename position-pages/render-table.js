@@ -1,32 +1,35 @@
-import { findById } from '../utils.js';
+import { getPlayer } from '../utils.js';
 const table = document.querySelector('table');
 
-function renderTableRow(playerChose, player) {
-    const price = playerChose.cost;
-    const position = playerChose.position;
+const x = getPlayer();
+const y = x.people;
+
+function renderTableRow(player) {
+    const price = player.cost;
+    const position = player.position;
     
     const tr = document.createElement('tr');
 
     const nameTd = document.createElement('td');
     const positionTd = document.createElement('td');
     const priceTd = document.createElement('td');
+    const dropTd = document.createElement('td');
 
     nameTd.textContent = player.id;
     positionTd.textContent = position;
     priceTd.textContent = price;
-
-    tr.append(nameTd, positionTd, priceTd);
+    dropTd.innerHTML = `<button id=dropButton value='${player.id}'>Drop Player</button>`;
+    tr.append(nameTd, positionTd, priceTd, dropTd);
 
     return tr;
 
 }
 
-export function renderTable(people) {
-    for (let player of people) {
-        const member = findById(people, player.id);
+export function renderTable() {
+    for (let player of y) {
     
-        
-        const tableRowDOM = renderTableRow(player, member);
+    
+        const tableRowDOM = renderTableRow(player);
     
         table.append(tableRowDOM);
     }

@@ -1,0 +1,29 @@
+.bios {
+    padding: 2.5em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    color: var(--main-bg-color);
+}
+
+.bios li {
+    padding: 1em;
+    border: 1px solid var(--accent-extra-light);
+    width: 20vw;
+    min-width: 400px;
+    margin: 1em 1em;
+    justify-content: flex-start;
+}
+
+.social-links {
+    justify-self: flex-end;
+}
+
+img {
+    height: 50px;
+}
+
+.main-about-us {
+    font-size: 20px;
+}
