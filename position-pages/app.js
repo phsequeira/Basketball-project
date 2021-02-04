@@ -38,7 +38,9 @@ dropButton.forEach(eachButton => {
         const stringUserStorage = JSON.stringify(userStorage);
 
         localStorage.setItem('USER', stringUserStorage);
-        window.location = './';
+        const currentTable = document.querySelector('tr');
+        currentTable.parentElement.removeChild(currentTable);
+        // window.location = './';
     });
 
 }); 
