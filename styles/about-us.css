@@ -17,6 +17,7 @@
     justify-content: flex-start;
     background-color: whitesmoke;
     border-radius: 10px;
+    list-style-type: none;
 }
 
 .social-links {
