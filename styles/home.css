@@ -111,3 +111,12 @@ img:active {
 input:checked {
   opacity: 1;
 }
+.tag-us {
+  background-color: grey;
+  border-radius: 5px;
+  color: orange;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  position: relative;
+  right: 10px;
+  
+}
