@@ -6,7 +6,7 @@ export function createMessage(wins) {
     } else if (wins >= 50) {
         return 'Your team had over 50  wins!! You are a pro!';
     } else {
-        return 'Your team had less than 10 wins. You are a rookie...';
+        return 'Your team had less than 50 wins. You are a rookie...';
     }
 }
 
