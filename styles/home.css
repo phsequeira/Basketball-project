@@ -1,4 +1,77 @@
 /* add home page styles here */
+
+body {
+  --header-height: 80px;
+  --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
+  --gutter: 30px;
+  --footer-height: 25px;
+  
+  font-family: 'Titillium Web', sans-serif;
+ 
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: calc(var(--footer-height));
+  font-size: 50px;
+ 
+}
+header {
+  display: flex;
+  justify-content: flex-end;
+  background-color: var(--color3);
+  height: var(--header-height);
+}
+section {
+  background-color: white;
+  width: 1200px;
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: var(--gutter);
+  padding-bottom: var(--gutter);
+  margin-top: var(--gutter);
+  margin-bottom: var(--gutter);
+  border: solid 2px var(--color1);
+  background-color: white;
+  opacity: 95%;
+  border-radius: 4%;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.gutter-right {
+  margin-right: 20px;
+}
+
+.big-rules {
+  font-size: 50px;
+  color: black;
+}
+.start {
+  font-size: 30px;
+  color: black;
+}
+.rules {
+  font-size: 20px;
+  color: black;
+  background-color: white;
+  
+}
+.intro-body {
+  background-image: url('../assets/Stadium.PNG');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
 .name-input {
   display: grid;
   margin: auto;
