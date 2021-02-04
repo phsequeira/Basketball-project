@@ -149,3 +149,7 @@ table {
 .aboutme-background {
     background-color: cornflowerblue;
 }
+.table {
+    text-align: center;
+    font-size: 22px;
+}
