@@ -18,8 +18,7 @@ function renderTableRow(player) {
     nameTd.textContent = player.id;
     positionTd.textContent = position;
     priceTd.textContent = price;
-    dropTd.innerHTML = '<button id=dropButton>Drop Player</button>';
-
+    dropTd.innerHTML = `<button id=dropButton value='${player.id}'>Drop Player</button>`;
     tr.append(nameTd, positionTd, priceTd, dropTd);
 
     return tr;
