@@ -13,14 +13,21 @@ const dropButton = document.getElementById('dropButton');
 dropButton.addEventListener('click', () => {
     
     const userStorage = getPlayer();
-    
     const userPeople = userStorage.people;
+    const funds = userStorage.funds;
+    
     
     let newUserData = findById(userPeople, dropButton.value);
-    //const cIndex = b.indexOf(c);
+    
+    const fundA = newUserData.cost;
 
-    //b.filter(i => i.id === c.id);
-    //console.log(b);
+    let refund = funds + fundA;
+    
+
+    userStorage.funds = refund;
+
+    const stringFunds = JSON.stringify(userStorage);
+    localStorage.setItem('USER', stringFunds);
 
     let dropPlayer = userPeople.filter(function(e) {
         return e.id !== newUserData.id;
