@@ -25,4 +25,4 @@ export function loserMessage(people){
     } else {
         return ' ';
     }
-};
+}

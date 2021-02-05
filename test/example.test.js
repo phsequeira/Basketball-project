@@ -83,7 +83,7 @@ test('Return apprpriate message based on funds and wins.', (expect) => {
 });
 test('Return bonus message based on posWorth', (expect) => {
     const posWorth = 289;
-    const expected = 'You actually set a proper lineup! bonus 7 wins added!';
+    const expected = 'You set a proper lineup! bonus 7 wins added!';
     const actual = bonusMessage(posWorth);
     expect.equal(actual, expected);
 });
