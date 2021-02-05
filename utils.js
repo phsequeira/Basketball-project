@@ -42,3 +42,12 @@ export function renderLogo() {
     const user = getPlayer();
     logo.src = '../assets/logos/' + user.id + '.png';
 }
+export function renderTeamName() {
+    const teamName = document.getElementById('team-name-logo');
+    const user = getPlayer();
+    
+    const localTeamName = user.team;
+    console.log(localTeamName);
+    teamName.textContent = localTeamName ;
+
+}
