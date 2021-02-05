@@ -62,7 +62,7 @@ userPick.addEventListener('submit', (e) => {
         user.people.push(choice);
         directUser(user.funds, roster);
         localStorage.setItem('USER', JSON.stringify(user));
-       } else alert('You cant afford to draft this player!');
+    } else alert('You cant afford to draft this player!');
 });
  
 
