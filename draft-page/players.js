@@ -28,7 +28,7 @@ for (let choice of draftPool.players) {
     const playerName = document.createElement('p');
     const playerPic = document.createElement('img');
     const draft = document.createElement('button');
-    playerName.textContent = choice.id + ` $${choice.cost}`;
+    playerName.textContent = choice.id + `: ${choice.position} $${choice.cost}`;
     selection.type = 'radio';
     selection.value = choice.id;
     selection.name = 'drafted';
