@@ -10,12 +10,15 @@ export function calculateTeamScore(players) {
     }
     if (user.posWorth === 289) {
         winShare += 7;
-    } 
+    } if (user.people.length < 5) {
+        winShare -= 7;
+    }
     return winShare;
 }
 
 export function renderUserTeam(lineup) {
     const user = getPlayer();
+    
     // grab target element
     const ul = document.getElementById('result');
     const resultsDisplay = document.getElementById('results-display');

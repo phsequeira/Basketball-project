@@ -1,5 +1,3 @@
-
-
 export function createMessage(wins) {
     if (wins >= 60) {
         return 'Your team had over 60 wins! You are a superstar!!';
@@ -14,6 +12,7 @@ export function calculateMessage(wins) {
     const result = createMessage(wins);
     return result;
 }
+
 export function bonusMessage(posWorth){
     if (posWorth === 289) {
         return 'You actually set a proper lineup! bonus 7 wins added!';

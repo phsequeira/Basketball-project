@@ -2,6 +2,7 @@ body {
     background-image: url('../assets/resultsBackground.png');
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     color: rgb(69, 75, 82);
 }
 
@@ -52,6 +53,10 @@ label {
 
 button:hover {
     border: royalblue 3px solid;
+}
+
+#logo {
+    height: 250px;
 }
 
 
