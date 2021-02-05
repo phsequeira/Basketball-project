@@ -10,7 +10,9 @@ export function calculateTeamScore(players) {
     }
     if (user.posWorth === 289) {
         winShare += 7;
-    } 
+    } if (user.people.length < 5) {
+        winShare -= 7;
+    }
     return winShare;
 }
 
