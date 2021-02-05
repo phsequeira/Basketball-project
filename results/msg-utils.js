@@ -14,3 +14,8 @@ export function calculateMessage(wins) {
     const result = createMessage(wins);
     return result;
 }
+export function bonusMessage(posWorth){
+    if (posWorth === 289) {
+        return 'You actually set a proper lineup! bonus 7 wins added!';
+    } else { 
+        return 'You failed to set a proper lineup! No Bonus!';}}

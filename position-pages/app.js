@@ -15,16 +15,17 @@ dropButton.forEach(eachButton => {
         const userStorage = getPlayer();
         const userPeople = userStorage.people;
         const funds = userStorage.funds;
-        
+        const posWorth = userStorage.posWorth;
         
         let newUserData = findById(userPeople, eachButton.value);
-        
+        const posWorthA = newUserData.posWorth;
         const fundA = newUserData.cost;
 
         let refund = funds + fundA;
-        
+        let posRefund = posWorth - posWorthA;
 
         userStorage.funds = refund;
+        userStorage.posWorth = posRefund;
 
         const stringFunds = JSON.stringify(userStorage);
         localStorage.setItem('USER', stringFunds);
@@ -40,7 +41,7 @@ dropButton.forEach(eachButton => {
         localStorage.setItem('USER', stringUserStorage);
         const currentTable = document.querySelector('tr');
         currentTable.parentElement.removeChild(currentTable);
-        // window.location = './';
+        window.location = './';
     });
 
 }); 
