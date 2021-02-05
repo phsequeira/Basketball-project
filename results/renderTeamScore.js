@@ -18,6 +18,7 @@ export function calculateTeamScore(players) {
 
 export function renderUserTeam(lineup) {
     const user = getPlayer();
+    
     // grab target element
     const ul = document.getElementById('result');
     const resultsDisplay = document.getElementById('results-display');

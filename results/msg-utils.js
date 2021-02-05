@@ -12,4 +12,3 @@ export function calculateMessage(wins) {
     const result = createMessage(wins);
     return result;
 }
-
