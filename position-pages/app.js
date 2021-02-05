@@ -1,8 +1,8 @@
 import { renderUl } from './render-ul.js';
-import { header, renderLogo, findById, getPlayer } from '../utils.js';
+import { header, renderLogo, findById, getPlayer, renderTeamName } from '../utils.js';
 import { renderTable } from './render-table.js';
 
-
+renderTeamName();
 renderLogo();
 header();
 renderUl();
@@ -44,6 +44,7 @@ dropButton.forEach(eachButton => {
     });
 
 }); 
+
 
 
 
