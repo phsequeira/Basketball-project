@@ -1,4 +1,4 @@
-import { calculateMessage } from './msg-utils.js';
+import { calculateMessage, bonusMessage } from './msg-utils.js';
 import { getPlayer } from '../utils.js';
 
 export function calculateTeamScore(players) {
@@ -35,7 +35,7 @@ export function renderUserTeam(lineup) {
     // calculate results message
     const resultMsg = calculateMessage(teamScore);
     span.textContent = resultMsg;
-    scoreSpan.textContent = `Season Wins: ${teamScore} games`;
+    scoreSpan.textContent = `Season Wins: ${teamScore} games ` + bonusMessage(user.posWorth);
     
     // append results score & message
     resultsDisplay.append(scoreSpan, span);
