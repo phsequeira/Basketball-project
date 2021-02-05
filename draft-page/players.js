@@ -21,7 +21,6 @@ backToTeam.addEventListener('click', () => {
 
 });
 
-
 for (let choice of draftPool.players) {
     const selection = document.createElement('input');
     const label = document.createElement('label');
@@ -41,12 +40,6 @@ for (let choice of draftPool.players) {
 
     userPick.append(label);    
 }
-
-
-// userPick.appendChild();
-
-
-
 
 userPick.addEventListener('submit', (e) => {
     e.preventDefault();
