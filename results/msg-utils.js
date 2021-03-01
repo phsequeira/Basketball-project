@@ -1,28 +1,24 @@
 export function createMessage(wins) {
-    if (wins >= 60) {
-        return 'Your team had over 60 wins! You are a superstar!!';
-    } else if (wins >= 50) {
-        return 'Your team had over 50  wins!! You are a pro!';
-    } else {
-        return 'Your team had less than 50 wins. You are a rookie...';
-    }
+    if (wins < 50) return 'Your team had less than 50 wins. You are a rookie...';
+
+    return wins >= 60 
+        ? 'Your team had over 60 wins! You are a superstar!!' 
+        : 'Your team had over 50 wins!! You are a pro!';
 }
 
 export function calculateMessage(wins) {
-    const result = createMessage(wins);
-    return result;
+    return createMessage(wins);
 }
 
 export function bonusMessage(posWorth){
-    if (posWorth === 289) {
-        return 'You set a proper lineup! bonus 7 wins added!';
-    } else { 
-        return 'You failed to set a proper lineup! No Bonus!';}}
+    return posWorth === 289 
+        ? 'You set a proper lineup! bonus 7 wins added!' 
+        : 'You failed to set a proper lineup! No Bonus!';
+}
 
 export function loserMessage(people){
-    if (people.length < 5) {
-        return 'You have also failed to draft 5 players, your team was penalized 7 wins!';
-    } else {
-        return ' ';
-    }
+    return people.length < 5 
+        ? 'You have also failed to draft 5 players, your team was penalized 7 wins!' 
+        : '';
+
 }

@@ -7,9 +7,9 @@ const aboutUs = document.getElementById('about-us');
 
 // render user result from local storage
 const storageTeam = getPlayer();
-const y = storageTeam.people;
+const people = storageTeam.people;
 renderLogo();
-renderUserTeam(y);
+renderUserTeam(people);
 
 aboutUs.addEventListener('click', () => {
     window.location = '../about-us/index.html';

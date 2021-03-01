@@ -15,10 +15,7 @@ header();
 renderLogo();
 
 backToTeam.addEventListener('click', () => {
-    
-    
     window.location = '../position-pages';
-
 });
 
 for (let choice of draftPool.players) {
@@ -55,12 +52,17 @@ userPick.addEventListener('submit', (e) => {
         user.people.push(choice);
         directUser(user.funds, roster);
         localStorage.setItem('USER', JSON.stringify(user));
+        // would prefer to see DOM manipulation rather than an alert
     } else alert('You cant afford to draft this player!');
 });
  
 
 function directUser(userFunds, roster){
-    if (userFunds <= 0 || roster === 4){
-        setTimeout(function(){window.location = '../results/index.html';}, 100);
-    } else {setTimeout(function(){window.location = '../position-pages';}, 100);}}
+    setTimeout(() => {
+        window.location = 
+            userFunds <= 0 || roster === 4 
+                ? '../results/index.html' 
+                : '../position-pages;'; }, 
+    100);
+} 
 

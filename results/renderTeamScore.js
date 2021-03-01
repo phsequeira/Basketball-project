@@ -3,16 +3,17 @@ import { getPlayer } from '../utils.js';
 
 export function calculateTeamScore(players) {
     const user = getPlayer();
-   
-    let winShare = 0;
-    for (let player of players) {
-        winShare += Math.round(player.wins);
-    }
+
+    let winShare = players.reduce((acc, curr) => acc + Math.round(curr.wins), 0);
+
     if (user.posWorth === 289) {
         winShare += 7;
-    } if (user.people.length < 5) {
+    } 
+    
+    if (user.people.length < 5) {
         winShare -= 7;
     }
+
     return winShare;
 }
 
