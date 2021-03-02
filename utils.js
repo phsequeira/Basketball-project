@@ -1,4 +1,5 @@
 export function findById(someArray, id) {
+    // very nice!
     return someArray.find(item => item.id === id);
 }
 

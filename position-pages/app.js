@@ -2,6 +2,7 @@ import { renderUl } from './render-ul.js';
 import { header, renderLogo, findById, getPlayer, renderTeamName } from '../utils.js';
 import { renderTable } from './render-table.js';
 
+// awesome!
 renderTeamName();
 renderLogo();
 header();

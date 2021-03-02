@@ -1,8 +1,8 @@
 import { getPlayer } from '../utils.js';
 const table = document.querySelector('table');
 
-const x = getPlayer();
-const y = x.people;
+const player = getPlayer();
+const people = player.people;
 
 function renderTableRow(player) {
     const price = player.cost;
@@ -14,11 +14,17 @@ function renderTableRow(player) {
     const positionTd = document.createElement('td');
     const priceTd = document.createElement('td');
     const dropTd = document.createElement('td');
+    const button = document.createElement('button');
 
     nameTd.textContent = player.id;
     positionTd.textContent = position;
     priceTd.textContent = price;
-    dropTd.innerHTML = `<button id=dropButton value='${player.id}'>Drop Player</button>`;
+
+    button.id = 'dropButton';
+    button.value = player.id;
+    button.textContent = 'Drop Player';
+
+    dropTd.append(button);
     tr.append(nameTd, positionTd, priceTd, dropTd);
 
     return tr;
@@ -26,9 +32,7 @@ function renderTableRow(player) {
 }
 
 export function renderTable() {
-    for (let player of y) {
-    
-    
+    for (let player of people) {
         const tableRowDOM = renderTableRow(player);
     
         table.append(tableRowDOM);
